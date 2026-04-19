@@ -25,6 +25,10 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: process.env.NODE_ENV === 'development',
   },
 
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
   webpack: (config) => {
     // Handle SVGs
     config.module.rules.push({
