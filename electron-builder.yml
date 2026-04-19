@@ -1,0 +1,28 @@
+appId: com.artifact.boilerplate
+productName: Artifact Boilerplate
+directories:
+  output: release
+  buildResources: resources
+files:
+  - dist/**/*
+  - package.json
+extraMetadata:
+  main: ./dist/electron/main.js
+win:
+  target: 
+    - portable
+    - nsis
+  signAndEditExecutable: false  
+  sign: false 
+mac:
+  target: dmg
+linux:
+  target: AppImage
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+publish:
+  provider: github
+  private: true
+asar: true
+forceCodeSigning: false 
